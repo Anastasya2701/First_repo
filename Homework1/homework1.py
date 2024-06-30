@@ -2,8 +2,8 @@ import datetime
 
 def get_days_from_today(date_str):
     try:
-            datetime_object = datetime.datetime.strptime(date_str, "%Y-%m-%d")
-            current_day: datetime.datetime = datetime.datetime.today()
+            datetime_object = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+            current_day: datetime.datetime = datetime.datetime.today().date()
             differens = datetime_object - current_day
             return differens.days
     except ValueError:
